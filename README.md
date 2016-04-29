@@ -119,13 +119,13 @@ Replace `<app-name>` with the name of your app
 1. Fork this repo
 2. Clone your fork and `cd` into it locally
 3. Create an empty heroku app called <app-name>
-    * `heroku create <app-name>
+    * `heroku create <app-name>`
 4. Add heroku as a remote to your fork
     * `git remote add heroku git@heroku.com:<app-name>.git`
 5. Set ENV vars for
-    * heroku config: set ROOT_URL=https://<app-name>.herokuapp.com DISABLE_WEBSOCKETS=true
+    * `heroku config: set ROOT_URL=https://<app-name>.herokuapp.com DISABLE_WEBSOCKETS=true`
 6. Create the MONGO addon:
-    * `heroku addons:create mongolab:sandbox
+    * `heroku addons:create mongolab:sandbox`
 7. Create a Procfile in the root directory of this repo and define the web process
     * `touch Procfile && echo "web: .meteor/heroku_build/bin/node .meteor/heroku_build/app/main.js" >> Procfile`
 8. Push the public branch to heroku
